@@ -2,25 +2,25 @@
 {
     public class Sphere
     {
-        internal Color _color;
-        internal double _radius;
+        internal Color Color;
+        internal double Radius;
         private int _timesThrown;
 
         public Sphere(Color color, double radius, int timesThrown)
         {
-            _color = color;
-            _radius = radius;
+            Color = color;
+            Radius = radius;
             _timesThrown = timesThrown;
         }
         
         public void Pop()
         {
-            _radius = 0;
+            Radius = 0;
         }
 
         public void Throw()
         {
-            if (_radius > 0)
+            if (Radius > 0)
             {
                 _timesThrown++;
             }
