@@ -18,5 +18,15 @@
         public Color(int red, int green, int blue) : this(red, green, blue, 255)
         {
         }
+        
+        public int Red { get; set; }
+        
+        public int Green { get; set; }
+
+        public int Blue { get; set; }
+
+        public int Alpha { get; set; }
+
+        public int GetGrey() => _red + _green + _blue / 3;
     }
 }
