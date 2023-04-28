@@ -1,18 +1,28 @@
-﻿namespace FillSpheres
+﻿using System;
+
+namespace FillSpheres
 {
     public class Color
     {
+        private const int MinValue = 0;
+        private const int MaxValue = 255;
+        
         private readonly int _red;
         private readonly int _green;
         private readonly int _blue;
         private int _alpha;
         
-        public Color(int red, int green, int blue, int alpha)
+        private int ValidateColorComponent(int value)
         {
-            _green = green;
-            _blue = blue;
-            _alpha = alpha;
-            _red = red;
+            return Math.Min(Math.Max(value, MinValue), MaxValue);
+        }
+
+        private Color(int red, int green, int blue, int alpha)
+        {
+            _green = ValidateColorComponent(green);
+            _blue = ValidateColorComponent(blue);
+            _alpha = ValidateColorComponent(alpha);
+            _red = ValidateColorComponent(red);
         }
         
         public Color(int red, int green, int blue) : this(red, green, blue, 255)

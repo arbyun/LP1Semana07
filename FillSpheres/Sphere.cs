@@ -5,12 +5,13 @@
         internal readonly Color Color;
         internal double Radius;
         private int _timesThrown;
+        public const int DefaultTimesThrown = 0;
 
-        public Sphere(Color color, double radius, int timesThrown)
+        public Sphere(Color color, double radius)
         {
             Color = color;
             Radius = radius;
-            _timesThrown = timesThrown;
+            _timesThrown = DefaultTimesThrown;
         }
         
         public void Pop()
