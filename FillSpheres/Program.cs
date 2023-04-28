@@ -27,8 +27,6 @@ namespace FillSpheres
 
             Console.WriteLine($"Sphere 3 - Color: ({sphere3._color}), Radius: {sphere3._radius}, Times Thrown: " +
                               $"{sphere3.GetTimesThrown()}");
-
-            Console.ReadLine();
         }
     }
 }
