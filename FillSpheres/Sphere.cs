@@ -2,8 +2,8 @@
 {
     public class Sphere
     {
-        private Color _color;
-        private double _radius;
+        internal Color _color;
+        internal double _radius;
         private int _timesThrown;
 
         public Sphere(Color color, double radius, int timesThrown)

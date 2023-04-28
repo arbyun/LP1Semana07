@@ -16,6 +16,19 @@ namespace FillSpheres
                 sphere2.Throw();
                 sphere3.Throw();
             }
+            
+            sphere2.Pop();
+
+            Console.WriteLine($"Sphere 1 - Color: ({sphere1._color}), Radius: {sphere1._radius}, Times Thrown: " +
+                              $"{sphere1.GetTimesThrown()}");
+
+            Console.WriteLine($"Sphere 2 - Color: ({sphere2._color}), Radius: Popped, Times Thrown: " +
+                              $"{sphere3.GetTimesThrown()}");
+
+            Console.WriteLine($"Sphere 3 - Color: ({sphere3._color}), Radius: {sphere3._radius}, Times Thrown: " +
+                              $"{sphere3.GetTimesThrown()}");
+
+            Console.ReadLine();
         }
     }
 }
