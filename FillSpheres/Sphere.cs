@@ -2,7 +2,7 @@
 {
     public class Sphere
     {
-        internal Color Color;
+        internal readonly Color Color;
         internal double Radius;
         private int _timesThrown;
 
