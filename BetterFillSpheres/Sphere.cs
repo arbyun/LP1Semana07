@@ -4,9 +4,9 @@
     {
         private const int DefaultTimesThrown = 0;
 
-        private Color Color { get; }
-        private double Radius { get; set; }
-        private int TimesThrown { get; set; }
+        internal Color Color { get; }
+        internal double Radius { get; set; }
+        internal int TimesThrown { get; set; }
 
         public Sphere(Color color, double radius)
         {

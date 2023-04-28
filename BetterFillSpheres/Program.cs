@@ -2,11 +2,25 @@
 
 namespace BetterFillSpheres
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Color red = new Color(255, 0, 0, 255);
+            Color green = new Color(0, 255, 0, 255);
+            Sphere sphere1 = new Sphere(red, 10);
+            Sphere sphere2 = new Sphere(green, 5);
+
+            sphere1.Throw();
+            sphere1.Throw();
+            sphere1.Pop();
+            sphere2.Throw();
+
+            Console.WriteLine($"Sphere 1: color={sphere1.Color.GetGrey()}, radius={sphere1.Radius}, " +
+                              $"times thrown={sphere1.TimesThrown}");
+            Console.WriteLine($"Sphere 2: color={sphere2.Color.GetGrey()}, radius={sphere2.Radius}, " +
+                              $"times thrown={sphere2.TimesThrown}");
+
         }
     }
 }
