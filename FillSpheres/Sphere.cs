@@ -13,6 +13,22 @@
             _timesThrown = timesThrown;
         }
         
-        
+        public void Pop()
+        {
+            _radius = 0;
+        }
+
+        public void Throw()
+        {
+            if (_radius > 0)
+            {
+                _timesThrown++;
+            }
+        }
+
+        public int GetTimesThrown()
+        {
+            return _timesThrown;
+        }
     }
 }
